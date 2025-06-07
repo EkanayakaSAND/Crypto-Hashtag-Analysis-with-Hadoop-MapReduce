@@ -1,0 +1,5 @@
+mvn clean package
+
+hadoop jar target/analysis-1.0-SNAPSHOT-jar-with-dependencies.jar com.cryptotweets.HashtagAnalysis /crypto/input /crypto/output
+
+hadoop fs -cat /crypto/output/part-r-00000 | head -n 20
